@@ -60,6 +60,7 @@ if (unsorted === sorted) {
 }
 //문제 35 2제곱, 3제곱, 4제곱을 할 수 있는 Factory 함수를 만들기
 //다른 사람 풀이
+//one함수는 n이라는 매개변수를 받고, two함수를 반환
 function one(n) {
   function two(value) {
     const sq = Math.pow(value, n); //Math.pow(base, exponent) : 주어진 밑 값을 주어진 지수 값으로 거듭제곱한 숫자 값
