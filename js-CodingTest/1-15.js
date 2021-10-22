@@ -14,7 +14,7 @@ function solution(s) {
 }
 const s = "study";
 console.log(solution(s));
-//다른 사람 풀이 1 substring사용
+//다른 사람 풀이 1 substring사용  str.substring(시작 인덱스번호, 끝 인덱스번호)
 function solution(s) {
   let answer;
   let mid = Math.floor(s.length / 2);
@@ -24,7 +24,7 @@ function solution(s) {
   return answer;
 }
 
-//substr사용
+//substr사용  str.substr(시작 인덱스, 추출 개수)
 function solution(s) {
   let answer;
   let mid = Math.floor(s.length / 2);
