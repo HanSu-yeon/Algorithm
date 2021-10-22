@@ -1,5 +1,5 @@
 //내가 푼 방식
-
+//또는 문자열 통째로 s.toUpperCase()해도 된다
 function solution(s) {
   let answer = ""; //answer를 스트링으로 만들어 값을 누적한다
   for (let i = 0; i < s.length; i++) {
