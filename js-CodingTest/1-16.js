@@ -1,14 +1,14 @@
-// //내가 푼 방식
-// function solution(s) {
-//   let answer = "";
-//   for (let x of s) {
-//     if (!answer.includes(x)) {
-//       //answer변수에 특정 문자가 없다면
-//       answer += x; //해당 문자를 넣어라
-//     }
-//   }
-//   return answer;
-// }
+//내가 푼 방식
+function solution(s) {
+  let answer = "";
+  for (let x of s) {
+    if (!answer.includes(x)) {
+      //answer변수에 특정 문자가 없다면
+      answer += x; //해당 문자를 넣어라
+    }
+  }
+  return answer;
+}
 str = "ksekkset";
 
 console.log(solution(str));

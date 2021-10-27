@@ -1,14 +1,14 @@
-// function solution(s) {
-//   let answer = [];
-//   for (let x of s) {
-//     //indexOf():찾으려는 값이 배열에 없으면 -1을 리턴한다
-//     if (answer.indexOf(x) < 0) {
-//       //배열에 없으면
-//       answer.push(x); //해당 문자열을 배열에 추가해라
-//     }
-//   }
-//   return answer;
-// }
+function solution(s) {
+  let answer = [];
+  for (let x of s) {
+    //indexOf():찾으려는 값이 배열에 없으면 -1을 리턴한다
+    if (answer.indexOf(x) < 0) {
+      //배열에 없으면
+      answer.push(x); //해당 문자열을 배열에 추가해라
+    }
+  }
+  return answer;
+}
 let str = ["good", "time", "good", "time", "student"];
 console.log(solution(str));
 
