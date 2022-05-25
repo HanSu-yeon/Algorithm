@@ -10,10 +10,10 @@ start=end=n//2
 for i in range(n):
   for j in range(start, end+1):
     res+=a[i][j]
-  if i < n//2:
+  if i < n//2: 
     start-=1
     end+=1
-  else:
+  else: #중간지점 지나면
     start+=1
     end-=1
 print(res)
