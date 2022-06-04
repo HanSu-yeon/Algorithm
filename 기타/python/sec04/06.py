@@ -1,15 +1,20 @@
 import sys
-sys.stdin=open("input.txt", "r")
-n=int(input())
-body=[]
+sys.stdin=open("input.txt","r")
+
+n = int(input())
+
+bodyInfo = []
+
 for i in range(n):
-    a, b=map(int, input().split())
-    body.append((a, b))
-body.sort(reverse=True)
-largest=0
+  height, weight = map(int, input().split())
+  bodyInfo.append((height, weight))
+bodyInfo.sort(reverse=True)
+
 cnt=0
-for x, y in body:
-    if y>largest:
-        largest=y
-        cnt+=1
+largestWeight=0
+for height, weight in bodyInfo:
+  if weight > largestWeight:
+    largestWeight = weight
+    cnt+=1
+    
 print(cnt)
