@@ -29,12 +29,13 @@ def Count(capacity):
 n, m= map(int, input().split())
 musicTimeList = list(map(int, input().split()))
 
+maxx=max(musicTimeList)
 lt=1
 rt=sum(musicTimeList)
 res=0
 while lt<=rt:
   mid=(lt+rt)//2  #mid: dvd 1장 용량
-  if Count(mid) <= m: #필요한 dvd개수가 m이하
+  if mid>=maxx and Count(mid) <= m: #필요한 dvd개수가 m이하
     res=mid
     #더 좋은 조건 탐색. 용량의 최소를 찾아야 함
     rt=mid-1 #더 작은쪽으로 좁혀서 가야함
