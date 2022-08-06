@@ -1,6 +1,4 @@
-from doctest import testfile
 import sys
-from turtle import left
 sys.stdin = open("input.txt", "r")
 
 
