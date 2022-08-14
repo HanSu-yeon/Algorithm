@@ -3,6 +3,7 @@ sys.stdin = open("input.txt", "r")
 
 
 def find(x):
+
     if x == parent[x]:
         return x
     else:
@@ -20,24 +21,24 @@ def union(x, y):
         number[x] += number[y]
 
 
-test_case = int(input())
+if __name__ == "__main__":
+    test_case = int(input())
 
-for _ in range(test_case):
-    parent = dict()
-    number = dict()
+    for _ in range(test_case):
+        parent = dict()
+        number = dict()
 
-    f = int(input())
+        f = int(input())
 
-    for _ in range(f):
-        x, y = input().split(' ')
+        for _ in range(f):
+            x, y = input().split(' ')
 
-        if x not in parent:
-            parent[x] = x
-            number[x] = 1
+            if x not in parent:
+                parent[x] = x
+                number[x] = 1
+            if y not in parent:
+                parent[y] = y
+                number[y] = 1
+            union(x, y)
 
-        if y not in parent:
-            parent[y] = y
-            number[y] = 1
-        union(x, y)
-
-    print(number[find(x)])
+            print(number[find(x)])
