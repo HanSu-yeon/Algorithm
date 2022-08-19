@@ -1,4 +1,5 @@
 # 오픈 채팅방
+
 def solution(record):
     nick_arr = dict()
     result = []
