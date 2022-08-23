@@ -5,8 +5,11 @@ sys.stdin = open("input.txt", "r")
 input = sys.stdin.readline
 n, k = map(int, input().split())
 deque_arr = deque([i for i in range(1, n+1)])  # 1부터 n까지의 원소 삽입
+
 res = []  # 결과
-while deque_arr:  # 큐가 빌때까지 반복문을 돌린다
+
+# 큐가 빌때까지 반복문을 돌린다
+while deque_arr:  # while대신 for i in range(n): 도 가능
 
     for i in range(k-1):  # k-1번 "왼쪽으로 돌리기" 수행
         x = deque_arr.popleft()
