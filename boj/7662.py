@@ -19,7 +19,7 @@ for _ in range(int(input())):  # 테스트 케이스만큼 반복
     min_heap = []  # 최소 힙(heapq는 최소 힙)
     max_heap = []  # 최대 힙(삽입/삭제할 때 음수로 넣기)
     current = 0  # 삽입할 원소의 인덱스(id값)
-    deleted = [False]*(k+1)  # 각 원소의 삭제여부. 다른 큐에서 삭제되었는지 판단할 수 있다
+    deleted = [False]*(k+1)  # 각 원소의 삭제여부.
     for i in range(k):
         cmd = input().split()
         operator, data = cmd[0], int(cmd[1])
