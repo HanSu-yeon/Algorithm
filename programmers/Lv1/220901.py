@@ -22,3 +22,19 @@ def solution(s):
         return answer
     else:
         return False
+
+# -----다른사람 풀이-----------
+
+
+def solution(s):
+    stack = []
+    for x in s:
+        if x == '(':
+            stack.append(x)
+        else:  # ')'일때
+            if len(stack) == 0:  # 스택이 비어있다면 => ')'의 짝꿍 '('이 없다는 의미
+                return False
+            else:
+                stack.pop()
+
+    return len(stack) == 0
