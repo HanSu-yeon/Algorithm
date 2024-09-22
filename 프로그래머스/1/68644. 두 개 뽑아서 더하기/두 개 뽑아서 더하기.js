@@ -1,11 +1,14 @@
-function solution(numbers) {
-  let dupArr = [];
-  for (i = 0; i < numbers.length; i++) {
-    for (j = i + 1; j < numbers.length; j++) {
-      dupArr.push(numbers[i] + numbers[j]);
+function solution(arr) {
+  let sumArray = [];
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      sumArray.push(arr[i] + arr[j]);
     }
   }
-  let uniqueArr = [...new Set(dupArr)].sort((a, b) => a - b);
 
-  return uniqueArr;
+  let newArray = [...new Set(sumArray)];
+
+  let res = newArray.sort((a, b) => a - b);
+  return res;
 }
