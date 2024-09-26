@@ -1,18 +1,24 @@
 //문제: 10진수를 2진수로 변환하기
 
 function solution(decimal) {
-  let binary = [];
-  let share;
-  let remain;
-  while (share != 1) {
-    share = Math.floor(decimal / 2);
-    remain = decimal % 2;
-    binary.push(remain);
-    decimal = share;
-  }
-  binary.push(share);
+  let stack = [];
 
-  return binary.reverse().join('');
+  while (decimal > 0) {
+    let remainder = decimal % 2;
+    stack.push(remainder);
+
+    decimal = Math.floor(decimal / 2);
+  }
+
+  return stack.reverse().join('');
+
+  /** pop()을 사용한 버전
+  let binary = '';
+  while (stack.length > 0) {
+    binary += stack.pop();
+  }
+  return binary;
+   * */
 }
 
 console.log(solution(10)); // 반환값 :  1010
