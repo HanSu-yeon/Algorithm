@@ -28,7 +28,7 @@ function solution(cards1, cards2, goal) {
       continue;
     }
   }
-  //goal의
+
   if (!goal.length) {
     answer = 'Yes';
   } else {
